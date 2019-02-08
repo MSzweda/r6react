@@ -14,9 +14,22 @@ Hello.propTypes = {
   name: PropTypes.string
 }
 
+const Card = () => (
+  <div>
+    <h1>Hello, Card!</h1>
+  </div>
+)
+
+const Main = () => (
+  <div>
+    <Hello name='Kitty' />
+    <Card />
+  </div>
+)
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="Kitty" />,
+    <Main />,
     document.body.appendChild(document.createElement('div')),
   )
 })
