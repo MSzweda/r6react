@@ -1,35 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import Cards from '../components/cards'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'World'
+class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <Cards />
+      </div>
+    );
+  }
 }
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
-
-const Card = () => (
-  <div>
-    <h1>Hello, Card!</h1>
-  </div>
-)
-
-const Main = () => (
-  <div>
-    <Hello name='Kitty' />
-    <Card />
-  </div>
-)
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Main />,
+    <App />,
     document.body.appendChild(document.createElement('div')),
   )
 })
