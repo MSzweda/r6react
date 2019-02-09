@@ -2,7 +2,7 @@ module Api
   module V1
     class CardsController < BaseController
       def index
-        respond_with Card.all
+        render json: Card.all
       end
     end
   end
